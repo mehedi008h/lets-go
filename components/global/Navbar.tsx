@@ -5,7 +5,7 @@ import { TbBrandPlanetscale } from "react-icons/tb";
 
 const Navbar = () => {
     return (
-        <div className="absolute top-0 right-0 left-0 h-16 bg-neutral-500 flex items-center justify-between px-10">
+        <div className="absolute top-0 right-0 left-0 h-16  flex items-center justify-between px-10">
             {/* logo  */}
             <div className="flex items-center gap-2">
                 <TbBrandPlanetscale size={50} color="white" />

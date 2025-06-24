@@ -1,16 +1,18 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Poppins, Satisfy } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/global/Navbar";
 
-const geistSans = Geist({
-    variable: "--font-geist-sans",
+const poppins = Poppins({
+    variable: "--font-poppins",
     subsets: ["latin"],
+    weight: ["400"],
 });
 
-const geistMono = Geist_Mono({
-    variable: "--font-geist-mono",
+const satisfy = Satisfy({
+    variable: "--font-satisfy",
     subsets: ["latin"],
+    weight: "400",
 });
 
 export const metadata: Metadata = {
@@ -26,7 +28,7 @@ export default function RootLayout({
     return (
         <html lang="en" suppressHydrationWarning>
             <body
-                className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+                className={`${poppins.variable} ${satisfy.variable} antialiased`}
                 suppressHydrationWarning
             >
                 <Navbar />
