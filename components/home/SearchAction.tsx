@@ -19,7 +19,7 @@ const SearchAction = () => {
         youth: 0,
     });
     return (
-        <div className="absolute bottom-10 left-0 right-0 flex items-center justify-center gap-4">
+        <div className="absolute bottom-10 left-0 right-0 flex items-center justify-center gap-4 z-50">
             <div className="h-fit w-fit bg-neutral-900/50 rounded-md backdrop-blur-sm flex items-center gap-4 px-7 py-4">
                 {/* location  */}
                 <SelectInput
