@@ -13,7 +13,7 @@ const SelectInput: FC<SelectInputProps> = ({
     options,
     onSelect,
     selectedOption,
-    label,
+    label = "Select",
 }) => {
     const [open, setOpen] = useState<boolean>(false);
     const modalBox = useRef<HTMLDivElement>(null);
@@ -49,7 +49,7 @@ const SelectInput: FC<SelectInputProps> = ({
     return (
         <div className="text-start w-48">
             <label htmlFor="" className="text-white font-normal text-base mb-2">
-                Location
+                {label}
             </label>
             <div
                 onClick={handleToggle}
@@ -68,7 +68,7 @@ const SelectInput: FC<SelectInputProps> = ({
             {open && (
                 <div
                     ref={modalBox}
-                    className="absolute bg-neutral-800 w-48 rounded-lg mt-2 -top-40"
+                    className="absolute bg-neutral-800 w-48 rounded-lg mt-2 bottom-28"
                 >
                     <ul className="p-2">
                         {options.map((option) => (
