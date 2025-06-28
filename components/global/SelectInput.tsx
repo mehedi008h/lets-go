@@ -48,12 +48,12 @@ const SelectInput: FC<SelectInputProps> = ({
     }, []);
     return (
         <div className="text-start w-48">
-            <label htmlFor="" className="text-white font-normal text-base mb-2">
+            <label htmlFor="" className="text-white font-normal text-base">
                 {label}
             </label>
             <div
                 onClick={handleToggle}
-                className=" w-full mt-4 flex justify-between items-center gap-3 cursor-pointer"
+                className=" w-full mt-2 flex justify-between items-center gap-3 cursor-pointer"
             >
                 <p className="text-sm text-neutral-400 font-normal">
                     {selectedOption || "Choose an option"}
