@@ -1,39 +1,36 @@
 import React from "react";
 import Heading from "../global/Heading";
-import image1 from "../../public/images/hero-bg (1).jpg";
-import image2 from "../../public/images/hero-bg (2).jpg";
-import image3 from "../../public/images/hero-bg (3).jpg";
-import image4 from "../../public/images/hero-bg (4).jpg";
+import { bg_images } from "@/constant/image";
 
 let data = [
     {
         type: "Beach",
-        image: image1,
+        image: bg_images.image1,
         count: 5,
     },
     {
         type: "Camping",
-        image: image2,
+        image: bg_images.image2,
         count: 7,
     },
     {
         type: "Cable car",
-        image: image3,
+        image: bg_images.image3,
         count: 2,
     },
     {
         type: "Climbing",
-        image: image4,
+        image: bg_images.image4,
         count: 17,
     },
     {
         type: "Discovery",
-        image: image2,
+        image: bg_images.image1,
         count: 7,
     },
     {
         type: "Sailboat",
-        image: image1,
+        image: bg_images.image2,
         count: 10,
     },
 ];

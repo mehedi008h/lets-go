@@ -1,17 +1,21 @@
+import { bg_images } from "@/constant/image";
 import React, { useEffect, useState } from "react";
 
-import image1 from "../../public/images/hero-bg (1).jpg";
-import image2 from "../../public/images/hero-bg (2).jpg";
-import image3 from "../../public/images/hero-bg (3).jpg";
-import image4 from "../../public/images/hero-bg (4).jpg";
 import {
     HiOutlineArrowNarrowLeft,
     HiOutlineArrowNarrowRight,
 } from "react-icons/hi";
 
 const NoiseBackground = () => {
-    const [currentImage, setCurrentImage] = useState(image2);
-    const images = [image1, image2, image3, image4];
+    const [currentImage, setCurrentImage] = useState(bg_images.image1);
+
+    // array of images to be used as background
+    const images = [
+        bg_images.image1,
+        bg_images.image2,
+        bg_images.image3,
+        bg_images.image4,
+    ];
 
     // handle next image changes
     const handleNextImage = () => {
