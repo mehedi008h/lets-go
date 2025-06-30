@@ -54,12 +54,12 @@ const NoiseBackground = () => {
             <img
                 src={currentImage.src}
                 alt="Hero Background"
-                className="w-full h-full object-cover absolute inset-0 opacity-100 transition-opacity duration-500 z-10"
+                className="w-full h-full object-cover absolute inset-0 opacity-100 transition-opacity duration-500"
             />
-            <div className="absolute top-0 right-0 left-0 bottom-0 h-screen flex justify-between items-center px-20 z-50">
+            <div className="absolute top-0 right-0 left-0 bottom-0 h-screen flex justify-between items-center px-20">
                 <div
                     onClick={handlePrevImage}
-                    className="w-18 h-18 bg-white/5 hover:bg-white/10 backdrop-blur-md rounded-full flex justify-center items-center cursor-pointer transation-all duration-300 ease-in-out"
+                    className="w-18 h-18 bg-white/5 hover:bg-white/10 backdrop-blur-md rounded-full flex justify-center items-center cursor-pointer transation-all duration-300 ease-in-out z-50"
                 >
                     <HiOutlineArrowNarrowLeft
                         size={30}
@@ -69,7 +69,7 @@ const NoiseBackground = () => {
                 </div>
                 <div
                     onClick={handleNextImage}
-                    className="w-18 h-18 bg-white/5 hover:bg-white/10 backdrop-blur-md rounded-full flex justify-center items-center cursor-pointer transation-all duration-300 ease-in-out"
+                    className="w-18 h-18 bg-white/5 hover:bg-white/10 backdrop-blur-md rounded-full flex justify-center items-center cursor-pointer transation-all duration-300 ease-in-out z-50"
                 >
                     <HiOutlineArrowNarrowRight
                         size={30}
