@@ -29,3 +29,11 @@ body {
     background-position: center;
     background-repeat: no-repeat;
 }
+
+.explore {
+    background-image: url("/images/hero-bg (4).jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
