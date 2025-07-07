@@ -12,7 +12,7 @@ const Tours = () => {
         setSelectedTourType(tourType);
     };
     return (
-        <div className="h-screen w-full bg-white py-10">
+        <div className="min-h-screen w-full bg-white py-10">
             <Heading
                 title="Our popular tours"
                 subtitle="Explore the tours chosen and recommended by a multitude of travelers."
