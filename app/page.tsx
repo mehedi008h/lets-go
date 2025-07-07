@@ -1,5 +1,6 @@
 import Explore from "@/components/home/Explore";
 import Hero from "@/components/home/Hero";
+import Tours from "@/components/home/Tours";
 import TourType from "@/components/home/TourType";
 import Whyus from "@/components/home/Whyus";
 
@@ -10,6 +11,7 @@ export default function Home() {
             <TourType />
             <Whyus />
             <Explore />
+            <Tours />
         </main>
     );
 }
