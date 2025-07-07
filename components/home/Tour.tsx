@@ -1,6 +1,6 @@
 "use client";
 import { bg_images } from "@/constant/image";
-import React, { useState } from "react";
+import React, { FC, useState } from "react";
 import {
     BiCalendar,
     BiHeart,
@@ -13,7 +13,27 @@ import {
 import { BsHeartFill, BsPeople } from "react-icons/bs";
 import Divider from "../global/Divider";
 
-const Tour = () => {
+interface TourProps {
+    title: string;
+    image: string;
+    price: number;
+    rating: number;
+    reviews: number;
+    duration: string;
+    people: number;
+    location: string;
+}
+
+const Tour: FC<TourProps> = ({
+    title,
+    image,
+    price,
+    rating,
+    reviews,
+    duration,
+    people,
+    location,
+}) => {
     const [isLiked, setIsLiked] = useState<boolean>(false);
 
     const handleLikeToggle = () => {
@@ -24,8 +44,8 @@ const Tour = () => {
             <div className="w-full h-72 rounded-t-lg overflow-hidden">
                 <img
                     className="w-full h-72 rounded-t-lg object-cover group-hover:scale-105 transition duration-300"
-                    src={bg_images.image4.src}
-                    alt=""
+                    src={image}
+                    alt={title}
                 />
             </div>
 
@@ -68,31 +88,35 @@ const Tour = () => {
                         <BiSolidStar color="orange" size={20} />
                         <BiStar color="orange" size={20} />
                     </div>
-                    <span className="text-neutral-600 font-semibold">4.9</span>
-                    <p className="text-neutral-600 font-sm">(1.327 rating)</p>
+                    <span className="text-neutral-600 font-semibold text-sm">
+                        {rating}
+                    </span>
+                    <p className="text-neutral-600 font-normal text-sm">
+                        ({reviews} rating)
+                    </p>
                 </div>
                 <h4 className="text-lg font-semibold text-neutral-600 mt-2 hover:text-amber-900 cursor-pointer">
-                    Explore Dhaka Lalbag Fort
+                    {title}
                 </h4>
 
                 <div className="my-2 flex items-center gap-3">
-                    <div className="flex items-center gap-2 text-neutral-500 font-normal">
-                        <BsPeople size={18} /> <span>5</span>
+                    <div className="flex items-center gap-2 text-neutral-500 font-normal text-sm">
+                        <BsPeople size={18} /> <span>{people} people</span>
                     </div>
 
-                    <div className="flex items-center gap-2 text-neutral-500 font-normal">
-                        <BiCalendar size={18} /> <span>5</span>
+                    <div className="flex items-center gap-2 text-neutral-500 font-normal text-sm">
+                        <BiCalendar size={18} /> <span>{duration}</span>
                     </div>
                 </div>
 
                 <Divider className="w-full h-[1px] my-4 bg-neutral-300" />
                 <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-2 text-neutral-500 font-normal">
+                    <div className="flex items-center gap-2 text-neutral-500 font-normal text-sm">
                         <BiLocationPlus size={18} />
-                        <span>Location</span>
+                        <span>{location}</span>
                     </div>
                     <div className="text-2xl font-semibold text-orange-500">
-                        $250
+                        $ {price}
                     </div>
                 </div>
             </div>

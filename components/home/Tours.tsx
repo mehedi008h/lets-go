@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Heading from "../global/Heading";
 import Tour from "./Tour";
+import { tourData } from "@/constant/data";
 
 const Tours = () => {
     const [selectedTourType, setSelectedTourType] = useState<string>("All");
@@ -43,11 +44,25 @@ const Tours = () => {
             </div>
 
             <div className="w-[80%] mx-auto mt-10 grid grid-cols-12 gap-5">
-                <Tour />
-                <Tour />
-                <Tour />
-                <Tour />
-                <Tour />
+                {tourData
+                    .filter(
+                        (item) =>
+                            item.category === selectedTourType ||
+                            selectedTourType === "All"
+                    )
+                    .map((tour) => (
+                        <Tour
+                            key={tour.id}
+                            title={tour.title}
+                            image={tour.image}
+                            price={tour.price}
+                            rating={tour.rating}
+                            reviews={tour.reviews}
+                            duration={tour.duration}
+                            people={tour.people}
+                            location={tour.location}
+                        />
+                    ))}
             </div>
         </div>
     );
